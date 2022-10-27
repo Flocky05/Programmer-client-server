@@ -2,8 +2,11 @@ import userEvent from '@testing-library/user-event';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/Authprovider/AuthProvider';
+import ToggleButton from 'react-toggle-button'
+import { useState } from 'react';
 
 const Header = () => {
+    const [toggle, setToggle] = useState(false);
     const { user, logOut } = useContext(AuthContext);
     const handleLogOut = () => {
         logOut()
@@ -21,11 +24,16 @@ const Header = () => {
                         <li><Link to="/courses">Courses</Link></li>
                         <li><Link to="/faq">FAQ</Link></li>
                         <li><Link to="/blog">Blog</Link></li>
-                        <li><Link to="/theme">Theme</Link></li>
+                        <li><ToggleButton
+                            value={toggle || false}
+                            onToggle={() => {
+                                setToggle(p => !p)
+
+                            }} /></li>
                         {
                             user?.uid ?
                                 <>
-                                    <img className='w-10 h-10 rounded-full mr-4' src={user.photoURL ? user.photoURL : 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'} alt='' />
+                                    <img title={user?.displayName} className='w-10 h-10 rounded-full mr-4' src={user.photoURL ? user.photoURL : 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'} alt='' />
                                     <li onClick={logOut} className=' cursor-pointer'>Log Out</li>
                                 </> :
                                 <li><Link to="/login">login</Link></li>

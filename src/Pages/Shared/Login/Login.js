@@ -11,7 +11,8 @@ const Login = () => {
     const [error, setError] = useState(null);
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
+    const from = location.state?.from || '/';
+    console.log(location);
     const handleSignIn = (event) => {
         setError(null)
         event.preventDefault();
@@ -43,7 +44,7 @@ const Login = () => {
         providerLogin(googleProvider)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                console.log(user); navigate(from, { replace: true })
             })
             .catch(error => console.error(error));
     }
@@ -52,7 +53,7 @@ const Login = () => {
         githubLogin()
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                console.log(user); navigate(from, { replace: true })
             })
             .catch(error => console.error(error));
     }
