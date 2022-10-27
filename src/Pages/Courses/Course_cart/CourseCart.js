@@ -13,13 +13,13 @@ const CourseCart = () => {
             {
                 courses?.map(course => <p key={course.course_id}>
                     <div className="card w-full bg-base-100 shadow-xl">
-                        <div className="card-body">
-                            <img className='h-56 object-cover' src={course.image} alt="" />
-                            <h2 className="card-title">{course.course_title}</h2>
-                            <p>{course.course_description.slice(0, 50)}</p>
-                            <div className="card-actions justify-end">
-                                <Link to={`/courses/course/${course.course_id}`} ><button className="btn btn-primary">Detail</button></Link>
-                            </div>
+                        <div className="p-2">
+                            <img className='h-52 object-cover rounded-t-xl ' src={course.image} alt="" />
+                            <div className='p-6'><h2 className="card-title">{course.course_title}</h2>
+                                <p>{course.course_description.slice(0, 50)}</p>
+                                <div className="card-actions justify-end">
+                                    <Link to={`/courses/course/${course.course_id}`} ><button className="btn btn-primary">Detail</button></Link>
+                                </div></div>
                         </div>
                     </div>
                 </p>

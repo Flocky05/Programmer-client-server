@@ -6,13 +6,14 @@ import { AuthContext } from '../../../Context/Authprovider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
-    const { signIn, loading, providerLogin } = useContext(AuthContext);
+    const { signIn, loading, githubLogin, providerLogin } = useContext(AuthContext);
 
-    const [error, setError] = useState('');
+    const [error, setError] = useState(null);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
     const handleSignIn = (event) => {
+        setError(null)
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
@@ -25,11 +26,10 @@ const Login = () => {
                 const user = result.result;
                 console.log(user);
                 form.reset();
-                setError('');
                 navigate(from, { replace: true })
             })
             .catch(error => {
-                console.log(error);
+
                 setError(error.message);
             });
 
@@ -39,7 +39,17 @@ const Login = () => {
 
     const googleProvider = new GoogleAuthProvider()
     const handleGoogleSignIn = () => {
+        setError(null)
         providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error));
+    }
+    const handleGithubSignIn = () => {
+        setError(null)
+        githubLogin()
             .then(result => {
                 const user = result.user;
                 console.log(user);
@@ -106,12 +116,13 @@ const Login = () => {
                                         <input
                                             placeholder="password"
                                             required
-                                            type="text"
+                                            type="password"
                                             className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
                                             id="password"
                                             name="password"
                                         />
                                     </div>
+                                    <p className='text-red-400'>{error}</p>
                                     <div className="mt-4 mb-2 sm:mb-4">
                                         <button
                                             type="submit"
@@ -123,7 +134,8 @@ const Login = () => {
 
                                 </form> <div>
                                     <button onClick={handleGoogleSignIn} className="btn btn-outline btn-primary mt-2"><FaGoogle></FaGoogle><span className='ml-2'>Login with google</span></button>
-                                    <button className="btn btn-outline btn-primary mt-2 "><FaGithub></FaGithub><span className='ml-2'>Login with github</span></button>
+
+                                    <button onClick={handleGithubSignIn} className="btn btn-outline btn-primary mt-2 "><FaGithub></FaGithub><span className='ml-2'>Login with github</span></button>
                                 </div>
                             </div>
                         </div>

@@ -12,15 +12,16 @@ const Courses = () => {
             .then(data => setCourses(data))
     }, [])
     return (
-        <div className='container mx-auto p-4'>
-            <h2>THis is Courses page , there are only {courses?.length} course</h2>
+        <div className='w-full md:w-5/6 mx-auto p-4 '>
+
             <div className='grid grid-cols-12'>
 
 
-                <div className='col-span-full sm:col-span-3'>
+                <div className='col-span-full sm:col-span-3 space-y-3 text-lg font-semibold tracking-wider sticky top-32 h-max '>
+                    <h2>THis is Courses page , there are only {courses?.length} course</h2>
                     {
                         courses?.map(course => <p key={course.course_id}>
-                            <Link> {course.course_title}</Link>
+                            <Link to={`/courses/course/${course.course_id}`}> {course.course_title}</Link>
                         </p>)
                     }
                 </div>
