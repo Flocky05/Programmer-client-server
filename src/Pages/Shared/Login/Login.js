@@ -90,11 +90,11 @@ const Login = () => {
                                             Subscribe
                                         </button>
                                     </div>
-                                    <div>
-                                        <button onClick={handleGoogleSignIn} className="btn btn-outline btn-primary mt-2"><FaGoogle></FaGoogle><span className='ml-2'>Login with google</span></button>
-                                        <button className="btn btn-outline btn-primary mt-2 "><FaGithub></FaGithub><span className='ml-2'>Login with github</span></button>
-                                    </div>
-                                </form>
+
+                                </form> <div>
+                                    <button onClick={handleGoogleSignIn} className="btn btn-outline btn-primary mt-2"><FaGoogle></FaGoogle><span className='ml-2'>Login with google</span></button>
+                                    <button className="btn btn-outline btn-primary mt-2 "><FaGithub></FaGithub><span className='ml-2'>Login with github</span></button>
+                                </div>
                             </div>
                         </div>
                     </div>

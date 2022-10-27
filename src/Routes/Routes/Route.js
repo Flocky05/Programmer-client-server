@@ -6,6 +6,7 @@ import Courses from "../../Pages/Courses/Courses";
 import CourseCart from "../../Pages/Courses/Course_cart/CourseCart";
 import FAQ from "../../Pages/FAQ/FAQ";
 import Home from "../../Pages/Home/Home";
+import PageNotFound from "../../Pages/PageNotFound/PageNotFound";
 import Login from "../../Pages/Shared/Login/Login";
 import Register from "../../Pages/Shared/Register/Register";
 
@@ -51,6 +52,10 @@ export const routes = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>
+            },
+            {
+                path: '/*',
+                element: <PageNotFound></PageNotFound>
             }
 
 

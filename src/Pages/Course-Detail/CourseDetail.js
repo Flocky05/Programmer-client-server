@@ -14,6 +14,7 @@ const CourseDetail = () => {
             {
                 ins.map(el => <p key={el}>🔥 {el}</p>)
             }
+            <button className='btn btn-primary p-2 rounded-lg my-8'>Get premium access</button>
         </div>
 
     );
