@@ -27,7 +27,7 @@ const Login = () => {
                             <Link
                                 to="/register"
                                 aria-label=""
-                                className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700 "
+                                className="text-white text-3xl font-semibold"
                             >
                                 Register
                             </Link>
