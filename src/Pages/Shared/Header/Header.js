@@ -6,7 +6,7 @@ const Header = () => {
         <div>
             <div className="navbar bg-base-100">
                 <div className="flex-1">
-                    <Link className="btn btn-ghost normal-case text-3xl" to='/' ><img className='w-8' src="https://cdn-icons-png.flaticon.com/512/1336/1336494.png" alt="" /> Programmer</Link>
+                    <Link className="btn btn-ghost normal-case text-3xl" to='/' ><img className='w-8' src="https://cdn-icons-png.flaticon.com/512/1336/1336494.png" alt="" /> <span className='ml-2'>Programmer</span></Link>
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal p-0">

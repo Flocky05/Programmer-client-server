@@ -25,11 +25,11 @@ const Login = () => {
                                 quae.
                             </p>
                             <Link
-                                to="/"
+                                to="/register"
                                 aria-label=""
-                                className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
+                                className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700 "
                             >
-
+                                Register
                             </Link>
                         </div>
                         <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
@@ -73,7 +73,7 @@ const Login = () => {
                                     <div className="mt-4 mb-2 sm:mb-4">
                                         <button
                                             type="submit"
-                                            className="bg-violet-800 p-2 rounded-lg"
+                                            className="btn btn-primary p-2 rounded-lg"
                                         >
                                             Subscribe
                                         </button>
