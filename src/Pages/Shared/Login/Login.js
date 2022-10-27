@@ -1,13 +1,42 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../../Context/Authprovider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
+    const { signIn, loading, providerLogin } = useContext(AuthContext);
 
-    const { providerLogin } = useContext(AuthContext);
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+    const handleSignIn = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+
+        signIn(email, password)
+            .then(result => {
+                const user = result.result;
+                console.log(user);
+                form.reset();
+                setError('');
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                console.log(error);
+                setError(error.message);
+            });
+
+
+
+    }
+
     const googleProvider = new GoogleAuthProvider()
     const handleGoogleSignIn = () => {
         providerLogin(googleProvider)
@@ -17,6 +46,7 @@ const Login = () => {
             })
             .catch(error => console.error(error));
     }
+
     return (
         <div className="relative">
             <img
@@ -49,7 +79,7 @@ const Login = () => {
                                 <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
                                     Login
                                 </h3>
-                                <form>
+                                <form onSubmit={handleSignIn}>
                                     <div className="mb-1 sm:mb-2">
                                         <label
                                             htmlFor="email"

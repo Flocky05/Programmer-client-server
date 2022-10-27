@@ -23,9 +23,9 @@ const Header = () => {
                         <li><Link to="/blog">Blog</Link></li>
                         <li><Link to="/theme">Theme</Link></li>
                         {
-                            user?.photoURL ?
+                            user?.uid ?
                                 <>
-                                    <img className='w-10 h-10 rounded-full mr-4' src={user.photoURL} alt='' />
+                                    <img className='w-10 h-10 rounded-full mr-4' src={user.photoURL ? user.photoURL : 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'} alt='' />
                                     <li onClick={logOut} className=' cursor-pointer'>Log Out</li>
                                 </> :
                                 <li><Link to="/login">login</Link></li>
