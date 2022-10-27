@@ -14,7 +14,7 @@ const CourseDetail = () => {
             {
                 ins.map(el => <p key={el}>🔥 {el}</p>)
             }
-            <Link className='btn btn-primary p-2 rounded-lg my-8' to='/login'>Get premium access</Link>
+            <Link className='btn btn-primary p-2 rounded-lg my-8' to='/checkOut'>Get premium access</Link>
         </div>
 
     );
