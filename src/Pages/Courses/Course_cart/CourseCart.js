@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const CourseCart = () => {
     const [courses, setCourses] = useState();
     useEffect(() => {
-        fetch(`http://localhost:5000/course`)
+        fetch(`https://programmer-server.vercel.app/course`)
             .then(res => res.json())
             .then(data => setCourses(data))
     }, [])
