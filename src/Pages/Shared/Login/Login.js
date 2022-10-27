@@ -1,8 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { useContext } from 'react';
+import { AuthContext } from '../../../Context/Authprovider/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
+
+    const { providerLogin } = useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider()
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error));
+    }
     return (
         <div className="relative">
             <img
@@ -15,21 +29,19 @@ const Login = () => {
                     <div className="flex flex-col items-center justify-between xl:flex-row">
                         <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
                             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-                                The quick, brown fox <br className="hidden md:block" />
-                                jumps over a{' '}
-                                <span className="text-teal-accent-400">lazy dog</span>
+                                Let's start Programming with <br className="hidden md:block" />
+                                <Link to='/'>Programmer</Link>
+
                             </h2>
                             <p className="max-w-xl mb-4 text-base text-gray-400 md:text-lg">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                accusantium doloremque laudan, totam rem aperiam, eaque ipsa
-                                quae.
+                                If you don't have account .May you join with us.
                             </p>
                             <Link
                                 to="/register"
                                 aria-label=""
                                 className="text-white text-3xl font-semibold"
                             >
-                                Register
+                                Register Now
                             </Link>
                         </div>
                         <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
@@ -79,7 +91,7 @@ const Login = () => {
                                         </button>
                                     </div>
                                     <div>
-                                        <button className="btn btn-outline btn-primary mt-2"><FaGoogle></FaGoogle><span className='ml-2'>Login with google</span></button>
+                                        <button onClick={handleGoogleSignIn} className="btn btn-outline btn-primary mt-2"><FaGoogle></FaGoogle><span className='ml-2'>Login with google</span></button>
                                         <button className="btn btn-outline btn-primary mt-2 "><FaGithub></FaGithub><span className='ml-2'>Login with github</span></button>
                                     </div>
                                 </form>
