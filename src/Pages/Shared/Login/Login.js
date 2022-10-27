@@ -39,7 +39,7 @@ const Login = () => {
                             <Link
                                 to="/register"
                                 aria-label=""
-                                className="text-white text-3xl font-semibold"
+                                className="text-rose-400 text-3xl font-semibold"
                             >
                                 Register Now
                             </Link>

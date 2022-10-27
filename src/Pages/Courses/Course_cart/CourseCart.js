@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const CourseCart = () => {
     const [courses, setCourses] = useState();
@@ -17,7 +18,7 @@ const CourseCart = () => {
                             <h2 className="card-title">{course.course_title}</h2>
                             <p>{course.course_description.slice(0, 50)}</p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary">Detail</button>
+                                <Link to={`/courses/course/${course.course_id}`} ><button className="btn btn-primary">Detail</button></Link>
                             </div>
                         </div>
                     </div>

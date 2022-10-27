@@ -87,30 +87,51 @@ const FAQ = () => {
                                 </svg>
                                 <span class="relative">The</span>
                             </span>{' '}
-                            quick, brown fox jumps over a lazy dog
+                            FAQ: YouKn0wWho Academy
                         </h2>
-                        <p class="text-base text-gray-700 md:text-lg">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque rem aperiam, eaque ipsa quae.
-                        </p>
+
                     </div>
                 </div>
                 <div class="space-y-4">
-                    <Item title="The quick, brown fox jumps over a lazy dog?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    <Item title="Can you be my personal trainer?">
+                        If you get stuck in some problem, then, I, personally, will help you solve that problem anytime (sometimes using a direct video call!). If it takes lifetime for you to complete some course, then I will help you for lifetime! In general I take around 2h everyday to answer everyone’s questions. Also, I sit with all the academy members biweekly to understand how everyone is doing. So by taking some course, you are having me as your Personal Trainer!
                     </Item>
-                    <Item title="The first mate and his Skipper too will do?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    <Item title="What is the thing that is great about this Academy?">
+                        We will interact with each other daily to solve the problems that you face. You will be provided with all the resources and the problems that you need to solve but when you struggle to solve those problems or any other problems, then you can immediately knock me on discord and I or other students will help you almost instantly.
+
+                        We are more like a community and we are more than happy to have you here!
                     </Item>
-                    <Item title="Is the Space Pope reptilian!?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    <Item title="Can I get discounts on the courses?">
+                        If you are a school or college student, then you will get INSANE amount of discounts (70% discount in some cases!, check the website). Otherwise, if you are an old academy member, then you can get 20% discounts on your next course by solving more problems in your current course! Check Academy Gold Pass to learn more.
                     </Item>
-                    <Item title="How much money you got on you?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    <Item title="Do you have Promo Codes?">
+                        Yes. Because you deserve some discounts!
+
+                        You can get promo codes from academy members and use them to get a 200 BDT discount! Note that the person who gives you the promo code will also receive 200 BDT!
+                    </Item>
+                    <Item title="Will the classes be live?">
+                        Most of the courses are recordings of live classes. But here is what you will get
+
+                        Extensive written resources on each class topic. Check this demo to understand what it looks like.
+                        Contests with curated hand-picked problems (20+ problems per contest on average).
+                        Editorials and Codes of the problems. Some of them have video editorials.
+                        Lifetime Discord server access to get help from me and other members who took this course.
+                        Video Recordings of the live class.
+                        Video Chapters for each video so that you can navigate the timestamps easily.
+                        So the only difference between this and live class is you are watching a live class but you can’t ask questions directly in the class, but you can ask them on discord directly to me. I am waiting to reply to your questions.
+
+                        Can I join anytime
+                    </Item>
+                    <Item title="Can I join anytime?">
+                        Yes, you can join anytime even after years as the classes are not live and all contents have been pushed to the website.
+                    </Item>
+                    <Item title="Can I directly talk to you?">
+                        Yes, I sit with all academy members biweekly to understand how everyone is doing. Also, if you solve most of the problems from some course, then you can set 30 minutes 1:1 meeting with me! I would love to talk to you.
+                    </Item>
+                    <Item title="Why am I giving huge discounts for school and college students?">
+                        I mean these kids are only in school and college and trying to learn Programming at this early age! Isn’t it itself pretty cool? So, to motivate them more I made this easier for them. That’s it.
+
+                        If you have other questions, feel free to ask in the comments or knock me on Facebook or anywhere you like.
                     </Item>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -24,32 +25,26 @@ const Home = () => {
                         Brand new
                     </p>
                     <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                        Everything you
+                        Let's start Programming with
                         <br className="hidden md:block" />
-                        can imagine{' '}
-                        <span className="inline-block text-deep-purple-accent-400">
-                            is real
-                        </span>
+                        Programmer{' '}
+
                     </h2>
-                    <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                        quae. explicabo.
-                    </p>
+
                     <div className="flex items-center">
-                        <a
-                            href="/"
-                            className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                        <Link
+                            to="/courses"
+                            className="btn btn-primary p-2 rounded-lg"
                         >
                             Get started
-                        </a>
-                        <a
-                            href="/"
+                        </Link>
+                        <Link
+                            to="/faq"
                             aria-label=""
-                            className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                            className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700 ml-3"
                         >
-                            Learn more
-                        </a>
+                            Learn more about us...
+                        </Link>
                     </div>
                 </div>
             </div>
