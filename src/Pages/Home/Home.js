@@ -1,8 +1,10 @@
 import React from "react";
 import FAQ from "../Blog/Blog";
 import CourseCart from "../Courses/Course_cart/CourseCart";
+import RunningCourse from "../RunningCourse/RunningCourse";
 import TeamMember from "../TeamMember/TeamMember";
 import TourBlog from "../TourBlog/TourBlog";
+import UpCommingCourses from "../UpCommingCourses/UpCommingCourses";
 import HomeHeader from "./HomeHeader";
 
 const Home = () => {
@@ -23,6 +25,8 @@ const Home = () => {
         </h2>
         <TourBlog></TourBlog>
       </div>
+      <RunningCourse></RunningCourse>
+      <UpCommingCourses></UpCommingCourses>
     </div>
   );
 };
