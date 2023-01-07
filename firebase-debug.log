@@ -1,0 +1,25 @@
+[debug] [2023-01-07T18:30:35.028Z] ----------------------------------------------------------------------
+[debug] [2023-01-07T18:30:35.032Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-01-07T18:30:35.032Z] CLI Version:   11.20.0
+[debug] [2023-01-07T18:30:35.032Z] Platform:      win32
+[debug] [2023-01-07T18:30:35.033Z] Node Version:  v16.15.1
+[debug] [2023-01-07T18:30:35.034Z] Time:          Sun Jan 08 2023 00:30:35 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-01-07T18:30:35.034Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-07T18:30:35.040Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-01-07T18:30:35.149Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-07T18:30:35.150Z] > authorizing via signed-in user (md.rakibul.islam.0501@gmail.com)
+[debug] [2023-01-07T18:30:35.150Z] [iam] checking project programmer-621f5 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-01-07T18:30:35.151Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/programmer-621f5:testIamPermissions [none]
+[debug] [2023-01-07T18:30:35.152Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/programmer-621f5:testIamPermissions x-goog-quota-user=projects/programmer-621f5
+[debug] [2023-01-07T18:30:35.152Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/programmer-621f5:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-07T18:30:35.816Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-01-07T18:30:35.816Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-01-07T18:33:38.464Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/programmer-621f5:testIamPermissions
+[debug] [2023-01-07T18:33:38.466Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/programmer-621f5 [none]
+[debug] [2023-01-07T18:33:49.571Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/programmer-621f5
+[debug] [2023-01-07T18:33:49.883Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/programmer-621f5
+    at RetryOperation._fn (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project programmer-621f5. Please make sure the project exists and your account has permission to access it.
