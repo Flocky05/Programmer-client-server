@@ -2,6 +2,7 @@ import React from "react";
 import FAQ from "../Blog/Blog";
 import CourseCart from "../Courses/Course_cart/CourseCart";
 import TeamMember from "../TeamMember/TeamMember";
+import TourBlog from "../TourBlog/TourBlog";
 import HomeHeader from "./HomeHeader";
 
 const Home = () => {
@@ -16,6 +17,12 @@ const Home = () => {
         <CourseCart></CourseCart>
       </div>
       <TeamMember></TeamMember>
+      <div>
+        <h2 className="text-3xl font-bold p-2 text-center">
+          Blogs about Other's Topics
+        </h2>
+        <TourBlog></TourBlog>
+      </div>
     </div>
   );
 };
