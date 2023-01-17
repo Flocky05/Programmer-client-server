@@ -3,7 +3,10 @@ import React from "react";
 const UpCommingCourses = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
+      <h2 className="text-3xl font-semibold text-center p-3">
+        Up Comming Course...
+      </h2>
+      <div className="hero min-h-screen bg-base-100">
         <div className="hero-content flex-col lg:flex-row">
           <img
             src="https://img.freepik.com/free-vector/data-science-programming_39422-1055.jpg?w=996&t=st=1673123901~exp=1673124501~hmac=e334753c8c55ef580ba019b291570dc26853071c933f50af3896247077f44a73"
