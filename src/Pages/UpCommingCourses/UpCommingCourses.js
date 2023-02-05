@@ -9,23 +9,24 @@ const UpCommingCourses = () => {
       <div className="hero min-h-screen bg-base-100">
         <div className="hero-content flex-col lg:flex-row">
           <img
-            src="https://img.freepik.com/free-vector/data-science-programming_39422-1055.jpg?w=996&t=st=1673123901~exp=1673124501~hmac=e334753c8c55ef580ba019b291570dc26853071c933f50af3896247077f44a73"
-            className="w-1/2 rounded-lg shadow-2xl"
+            src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            className="w-1/2 rounded-lg shadow-2xl hover:scale-110 duration-1000 transition-all"
             alt=""
           />
-          <div>
-            <h1 className="text-5xl font-semibold">Data Science</h1>
+          <div className="p-8">
+            <h1 className="text-4xl font-semibold">Data Science</h1>
             <p className="py-6 text-xl">
-              <span className="font-bold text-2xl">Course Mentor:</span>
+              <span className="font-semibold text-2xl">Course Mentor:</span>
               Md.Rakibul Islam.
               <p>
                 Several workshops are available. You will get a certificate of
                 achievement for each workshop after completing it. To reserve a
                 spot, use the form below each workshop.
               </p>
-              <span className="font-bold text-2xl">Course price:</span>$15 only
+              <span className="font-semibold text-2xl ">Course price:</span>
+              <span className="">$</span>150 only
             </p>
-            <button className="bg-blue-700 text-white rounded-md p-2">
+            <button className="bg-blue-700 text-white rounded-md px-4 py-2 mb-2">
               Learn More
             </button>
             <p>Enrol last time:</p>
