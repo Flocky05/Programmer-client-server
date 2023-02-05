@@ -230,7 +230,7 @@ export const TeamMember = () => {
                   </svg>
                 </a>
                 <a
-                  href="/https://www.facebook.com/sanglap.ahmed.3"
+                  href="https://www.facebook.com/sanglap.ahmed.3"
                   target="blank"
                   className="text-white transition-colors duration-300 hover:text-teal-accent-400"
                 >
@@ -305,7 +305,7 @@ export const TeamMember = () => {
                   </svg>
                 </a>
                 <a
-                  href="/https://www.facebook.com/mehedihasan.shanto.733"
+                  href="https://www.facebook.com/mehedihasan.shanto.733"
                   target="blank"
                   className="text-white transition-colors duration-300 hover:text-teal-accent-400"
                 >
